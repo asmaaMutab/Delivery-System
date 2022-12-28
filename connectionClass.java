@@ -27,10 +27,12 @@ public static ResultSet res;
 
 public static  Connection getConnection(){
 try{
+  // connection information
 con=DriverManager.getConnection("jdbc:derby://localhost:1527/sds", "tameem","sds123" );
 
 
 }   catch (SQLException ex) {
+  // handle SQLException for connection step
         Logger.getLogger(connectionClass.class.getName()).log(Level.SEVERE, null, ex);
         JOptionPane.showMessageDialog(null, "DataBase", "DataBase not conmected  ",JOptionPane.ERROR );
     }
@@ -68,10 +70,10 @@ int state = 0 ;
     } catch (SQLException ex) {
         Logger.getLogger(connectionClass.class.getName()).log(Level.SEVERE, null, ex);
     }
-    return state;// rerturn num of state
-    
+    return state;// rerturn the state value
+
 }
 
 
- 
+
 }
